@@ -35,7 +35,9 @@ const Home = () => {
           <h3 className={styles.subtitle}>gif search engine for you</h3>
         </div>
         <Link to="/search">
-          <button className={cx('cta', 'linkButton')}>start search</button>
+          <button type="button" className={cx('cta', 'linkButton')}>
+            start search
+          </button>
         </Link>
       </section>
       <section ref={wrapperRef} className={styles.featureSection}>
@@ -48,7 +50,9 @@ const Home = () => {
             <FeatureItem title="Free for everyone" imageSrc={freeGif} />
           </div>
           <Link to="/search">
-            <button className={styles.linkButton}>start search</button>
+            <button type="button" className={styles.linkButton}>
+              start search
+            </button>
           </Link>
         </div>
       </section>
