@@ -1,5 +1,5 @@
-import { Artist } from '../../../../models/help/artist';
-import ArtistInfo from '../ArtistInfo/ArtistInfo';
+import type { Artist } from '../../../../models/help/artist';
+import MemoArtistInfo from '../ArtistInfo/ArtistInfo';
 
 type ArtistListProps = {
   artists: Artist[];
@@ -8,8 +8,8 @@ type ArtistListProps = {
 const ArtistList = ({ artists }: ArtistListProps) => {
   return (
     <ul>
-      {artists.map((artist, index) => {
-        return <ArtistInfo key={index} artist={artist} />;
+      {artists.map((artist) => {
+        return <MemoArtistInfo key={artist.name} artist={artist} />;
       })}
     </ul>
   );
