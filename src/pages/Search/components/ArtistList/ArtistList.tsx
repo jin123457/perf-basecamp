@@ -8,8 +8,8 @@ type ArtistListProps = {
 const ArtistList = ({ artists }: ArtistListProps) => {
   return (
     <ul>
-      {artists.map((artist) => {
-        return <MemoArtistInfo key={artist.name} artist={artist} />;
+      {artists.map((artist, index) => {
+        return <MemoArtistInfo key={index} artist={artist} />;
       })}
     </ul>
   );
