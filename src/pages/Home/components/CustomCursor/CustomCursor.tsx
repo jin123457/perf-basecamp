@@ -18,8 +18,9 @@ const CustomCursor = ({ text = '' }: CustomCursorProps) => {
       // 커서 중앙 정렬 (before와 텍스트 모두 포함)
       const offsetX = 12; // before의 반지름
       const offsetY = 12; // before의 반지름
-      cursor.style.top = `${(mousePosition.clientY ?? 0) - offsetY}px`;
-      cursor.style.left = `${(mousePosition.clientX ?? 0) - offsetX}px`;
+      cursor.style.transform = `translate3d(${(mousePosition.clientX ?? 0) - offsetX}px, ${
+        (mousePosition.clientY ?? 0) - offsetY
+      }px, 0)`;
     }
   }, [mousePosition]);
 
