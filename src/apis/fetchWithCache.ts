@@ -1,7 +1,6 @@
 type DataFetcher<T> = () => Promise<T>;
 
 interface CacheOptions {
-  cacheName?: string;
   ttl?: number;
 }
 
